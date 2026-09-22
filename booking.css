@@ -17,8 +17,8 @@
 .hero-image .brand-hero-image {
   object-fit: contain;
   filter: none;
-  background: #fffdeb;
-  padding: clamp(20px, 4vw, 52px);
+  background: #3a3f41;
+  padding: 0;
 }
 
 .reservation-layout {
