@@ -231,7 +231,7 @@
   font-size: 13px;
 }
 
-.form-status.success { color: #3f6a4c; }
+.form-status.success { color: #3f6a4c; white-space: pre-line; }
 .form-status.error { color: #a43c33; }
 .form-status a { text-decoration: underline; }
 

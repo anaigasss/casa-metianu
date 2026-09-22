@@ -2,6 +2,12 @@ DirectoryIndex index.html
 Options -Indexes
 AddDefaultCharset UTF-8
 
+<IfModule mod_env.c>
+  SetEnv RESTAURANT_RESERVATION_EMAIL_1 "mihai.tomoiaga@grillwine.ro"
+  SetEnv RESTAURANT_RESERVATION_EMAIL_2 "casametianu@yahoo.com"
+  SetEnv RESTAURANT_RESERVATION_FROM_EMAIL "rezervari@casametianu.ro"
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} !=on

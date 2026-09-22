@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Outfit:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="booking.css?v=20260922-16" />
+    <link rel="stylesheet" href="booking.css?v=20260922-17" />
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Restaurant","name":"Casa Mețianu","url":"https://casametianu.ro/","email":"mihai.tomoiaga@grillwine.ro","address":{"@type":"PostalAddress","streetAddress":"Strada Ioan Mețianu nr. 2","addressLocality":"Arad","addressCountry":"RO"},"servesCuisine":["Românească","Internațională"]}
     </script>
@@ -124,22 +124,18 @@
             <p>Trimite-ne detaliile, iar echipa Casa Mețianu te va contacta pentru confirmarea mesei. Rezervarea devine valabilă după confirmarea din partea restaurantului.</p>
             <div class="reservation-address"><span>Locație</span><strong>Strada Ioan Mețianu nr. 2<br />Arad, România</strong></div>
           </div>
-          <form class="booking-form" id="booking-form" action="https://formsubmit.co/mihai.tomoiaga@grillwine.ro" method="POST">
-            <input type="hidden" name="_subject" value="Cerere nouă de rezervare — Casa Mețianu" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_url" value="https://casametianu.ro/#rezervari" />
-            <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+          <form class="booking-form" id="booking-form" action="api/reservation.php" method="POST">
+            <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="form-grid">
-              <label class="field field-full"><span>Nume și prenume *</span><input type="text" name="Nume" autocomplete="name" required /></label>
-              <label class="field"><span>Telefon *</span><input type="tel" name="Telefon" autocomplete="tel" inputmode="tel" required /></label>
+              <label class="field field-full"><span>Nume și prenume *</span><input type="text" name="name" autocomplete="name" minlength="2" maxlength="120" required /></label>
+              <label class="field"><span>Telefon *</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" minlength="6" maxlength="30" required /></label>
               <label class="field"><span>Email *</span><input type="email" name="email" autocomplete="email" required /></label>
-              <label class="field"><span>Data *</span><input id="booking-date" type="date" name="Data" required /></label>
-              <label class="field"><span>Ora preferată *</span><input type="time" name="Ora" step="900" required /></label>
-              <label class="field field-full"><span>Număr de persoane *</span><select name="Număr persoane" required><option value="" selected disabled>Alege</option><option>1 persoană</option><option>2 persoane</option><option>3 persoane</option><option>4 persoane</option><option>5 persoane</option><option>6 persoane</option><option>7 persoane</option><option>8 persoane</option><option value="9+ persoane">9+ persoane</option></select></label>
-              <label class="field field-full"><span>Mesaj sau preferințe</span><textarea name="Mesaj" rows="4" placeholder="Alergii, aniversare, scaun pentru copil sau alte detalii"></textarea></label>
+              <label class="field"><span>Data *</span><input id="booking-date" type="date" name="date" required /></label>
+              <label class="field"><span>Ora preferată *</span><input type="time" name="time" step="900" required /></label>
+              <label class="field field-full"><span>Număr de persoane *</span><select name="guests" required><option value="" selected disabled>Alege</option><option value="1">1 persoană</option><option value="2">2 persoane</option><option value="3">3 persoane</option><option value="4">4 persoane</option><option value="5">5 persoane</option><option value="6">6 persoane</option><option value="7">7 persoane</option><option value="8">8 persoane</option><option value="9+">9+ persoane</option></select></label>
+              <label class="field field-full"><span>Mesaj sau preferințe</span><textarea name="message" rows="4" maxlength="2000" placeholder="Alergii, aniversare, scaun pentru copil sau alte detalii"></textarea></label>
             </div>
-            <label class="consent"><input type="checkbox" name="Acord contact" value="Da" required /><span>Sunt de acord ca datele introduse să fie folosite pentru procesarea și confirmarea acestei cereri de rezervare. *</span></label>
+            <label class="consent"><input type="checkbox" name="consent" value="yes" required /><span>Sunt de acord ca datele introduse să fie folosite pentru procesarea și confirmarea acestei cereri de rezervare. *</span></label>
             <button class="button button-dark booking-submit" type="submit">Trimite cererea</button>
             <p class="form-note">Nu este necesară plata online. Vei primi confirmarea direct de la echipa restaurantului.</p>
             <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
@@ -166,6 +162,6 @@
       </div>
       <div class="container footer-bottom"><span>© 2026 Casa Mețianu. Toate drepturile rezervate.</span><span>Politică de confidențialitate · Termeni &amp; condiții</span></div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260922-2"></script>
   </body>
 </html>

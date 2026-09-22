@@ -55,18 +55,21 @@ bookingForm?.addEventListener('submit', async (event) => {
   formStatus.textContent = '';
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/mihai.tomoiaga@grillwine.ro', {
+    const response = await fetch(bookingForm.action, {
       method: 'POST',
       headers: { Accept: 'application/json' },
       body: new FormData(bookingForm),
     });
-    if (!response.ok) throw new Error('Submission failed');
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Submission failed');
+    }
     bookingForm.reset();
     formStatus.className = 'form-status success';
-    formStatus.textContent = 'Cererea a fost trimisă. Echipa Casa Mețianu te va contacta pentru confirmare.';
+    formStatus.textContent = 'Mulțumim! Cererea ta de rezervare a fost trimisă cu succes.\n\nAceasta este o cerere de rezervare și nu reprezintă o confirmare finală. Vom verifica disponibilitatea și te vom contacta pentru a confirma rezervarea.';
   } catch (error) {
     formStatus.className = 'form-status error';
-    formStatus.innerHTML = 'Cererea nu a putut fi trimisă. Te rugăm să ne scrii la <a href="mailto:mihai.tomoiaga@grillwine.ro">mihai.tomoiaga@grillwine.ro</a>.';
+    formStatus.textContent = 'Cererea nu a putut fi trimisă. Te rugăm să încerci din nou. Dacă problema persistă, ne poți scrie la mihai.tomoiaga@grillwine.ro.';
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = 'Trimite cererea';
