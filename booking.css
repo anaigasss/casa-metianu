@@ -202,12 +202,17 @@
   }
 }
 
-/* Match the warm ivory ground used by the original Casa Mețianu artwork. */
+/* Global Casa Mețianu charcoal and steel palette. */
 :root {
-  --cream: #fffee8;
-  --paper: #fffee8;
-  --surface-ivory: #fffee8;
-  --espresso: #736761;
+  --cream: #3a3f41;
+  --paper: #3a3f41;
+  --surface-ivory: #3a3f41;
+  --espresso: #b7c4cc;
+  --ink: #b7c4cc;
+  --taupe: #b7c4cc;
+  --gold: #b7c4cc;
+  --white: #454b4e;
+  --line: rgba(183, 196, 204, 0.28);
 }
 
 body,
@@ -223,6 +228,38 @@ body,
 .section-dark,
 .site-footer {
   color: var(--ink);
+}
+
+.image-caption {
+  color: var(--text-steel, #b7c4cc);
+  background: rgba(58, 63, 65, 0.9);
+}
+
+.field input,
+.field select,
+.field textarea {
+  color-scheme: dark;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(183, 196, 204, 0.62);
+}
+
+.site-header {
+  border-bottom-color: rgba(183, 196, 204, 0.14);
+}
+
+.button-dark {
+  color: #b7c4cc;
+  background: #25292a;
+  border-color: #25292a;
+}
+
+.button-dark:hover {
+  color: #b7c4cc;
+  background: #111415;
+  border-color: #111415;
 }
 
 .menu-preview h2,
