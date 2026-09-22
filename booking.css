@@ -754,3 +754,56 @@ body,
     justify-content: flex-start;
   }
 }
+
+/* Mobile navigation stays visible instead of opening a colored dropdown. */
+@media (max-width: 780px) {
+  .site-header {
+    height: auto;
+  }
+
+  .nav-shell {
+    height: auto;
+    min-height: 70px;
+    flex-wrap: wrap;
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    order: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-basis: 100%;
+    gap: 0;
+    padding: 10px 0 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .main-nav a {
+    width: auto;
+    padding: 9px 4px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.14);
+    text-align: center;
+    color: var(--taupe);
+    font-size: 9px;
+    letter-spacing: 0.09em;
+  }
+
+  .main-nav a:nth-child(odd) {
+    border-right: 1px solid rgba(51, 51, 51, 0.14);
+  }
+
+  .main-nav a:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .hero {
+    padding-top: 154px;
+  }
+}
