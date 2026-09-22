@@ -381,6 +381,12 @@ body,
 
 .hero {
   border-bottom: 2px solid #736761;
+  min-height: 0;
+  padding-bottom: 52px;
+}
+
+.hero .scroll-mark {
+  display: none;
 }
 
 .site-header .button-dark,
@@ -395,6 +401,12 @@ body,
   color: #f5f5f5;
   background: #545b5e;
   border-color: #545b5e;
+}
+
+@media (max-width: 780px) {
+  .hero {
+    padding-bottom: 42px;
+  }
 }
 
 .house-story-grid {
