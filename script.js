@@ -30,6 +30,19 @@ menuTabs.forEach((tab) => {
   });
 });
 
+const heritageGallery = document.querySelector('#heritage-gallery');
+const galleryButtons = document.querySelectorAll('[data-gallery-direction]');
+
+galleryButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (!heritageGallery) return;
+    const card = heritageGallery.querySelector('.heritage-frame');
+    const distance = card ? card.getBoundingClientRect().width + 22 : heritageGallery.clientWidth * 0.75;
+    const direction = button.dataset.galleryDirection === 'previous' ? -1 : 1;
+    heritageGallery.scrollBy({ left: distance * direction, behavior: 'smooth' });
+  });
+});
+
 const bookingForm = document.querySelector('#booking-form');
 const bookingDate = document.querySelector('#booking-date');
 const formStatus = document.querySelector('#form-status');
