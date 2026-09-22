@@ -25,6 +25,11 @@
   font-weight: 500;
 }
 
+.dish b {
+  font-family: "Cormorant Garamond", "Bodoni 72", "Didot", "Playfair Display", serif;
+  font-weight: 500;
+}
+
 .hero-title-main {
   display: inline-block;
   animation: title-wave-main 5.8s ease-in-out infinite;
