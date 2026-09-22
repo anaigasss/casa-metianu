@@ -7,12 +7,13 @@
 }
 
 .hero h1 {
-  font-family: "Olivia", "Playfair Display", cursive;
+  font-family: "Cormorant Garamond", "Bodoni 72", "Didot", "Playfair Display", serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: clamp(72px, 9vw, 118px);
-  line-height: 0.94;
-  letter-spacing: -0.025em;
+  font-weight: 500;
+  font-size: clamp(52px, 6.4vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
 }
 
 .hero-title-main {
@@ -21,36 +22,14 @@
   transform-origin: center bottom;
 }
 
-.hero h1 em {
-  display: inline-block;
-  font-family: "Allura", "Playfair Display", cursive;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.64em;
-  line-height: 1.05;
-  letter-spacing: 0.01em;
-  animation: title-wave-script 5.8s ease-in-out infinite;
-  transform-origin: center;
-}
-
 @keyframes title-wave-main {
   0%, 100% { transform: translateY(0) rotate(-0.25deg); }
-  50% { transform: translateY(-5px) rotate(0.35deg); }
-}
-
-@keyframes title-wave-script {
-  0%, 100% { transform: translateY(-0.14em) rotate(-2deg); }
-  50% { transform: translateY(-0.04em) rotate(-0.7deg); }
+  50% { transform: translateY(-3px) rotate(0.2deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-title-main,
-  .hero h1 em {
+  .hero-title-main {
     animation: none;
-  }
-
-  .hero h1 em {
-    transform: translateY(-0.14em) rotate(-2deg);
   }
 }
 
@@ -73,7 +52,8 @@
 
 @media (max-width: 780px) {
   .hero h1 {
-    font-size: clamp(58px, 18vw, 84px);
+    font-size: clamp(44px, 13vw, 64px);
+    white-space: normal;
   }
 }
 
