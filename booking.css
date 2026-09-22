@@ -16,6 +16,15 @@
   white-space: nowrap;
 }
 
+.menu-preview h2,
+.menu-preview h2 em,
+.reservation h2,
+.reservation h2 em {
+  font-family: "Cormorant Garamond", "Bodoni 72", "Didot", "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
 .hero-title-main {
   display: inline-block;
   animation: title-wave-main 5.8s ease-in-out infinite;
