@@ -7,17 +7,22 @@
 }
 
 .hero h1 {
-  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-family: "Olivia", "Playfair Display", cursive;
   font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-size: clamp(72px, 9vw, 118px);
+  line-height: 0.94;
+  letter-spacing: -0.025em;
 }
 
 .hero h1 em {
-  font-family: "Manrope", "Outfit", sans-serif;
+  display: inline-block;
+  font-family: "Questa Grande", "Playfair Display", serif;
   font-style: normal;
-  font-weight: 300;
-  letter-spacing: -0.025em;
+  font-weight: 400;
+  font-size: 0.53em;
+  line-height: 1.15;
+  letter-spacing: 0;
 }
 
 @media (min-width: 781px) {
@@ -34,6 +39,12 @@
 
   .hero-actions {
     justify-content: center;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero h1 {
+    font-size: clamp(58px, 18vw, 84px);
   }
 }
 
