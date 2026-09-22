@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("assets/fonts/CaviarDreams.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.hero h1,
+.hero h1 em {
+  font-family: "Caviar Dreams", "Outfit", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
 .hero-image .brand-hero-image {
   object-fit: contain;
   filter: none;
