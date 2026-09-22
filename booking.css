@@ -23,7 +23,7 @@
   font-size: 0.64em;
   line-height: 1.05;
   letter-spacing: 0.01em;
-  transform: rotate(-2deg);
+  transform: translateY(-0.14em) rotate(-2deg);
 }
 
 @media (min-width: 781px) {
