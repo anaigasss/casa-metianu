@@ -17,8 +17,15 @@
 .hero-image .brand-hero-image {
   object-fit: contain;
   filter: none;
-  background: #3a3f41;
+  background: #333333;
   padding: 0;
+}
+
+@media (min-width: 781px) {
+  .hero-grid {
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 48px;
+  }
 }
 
 .reservation-layout {
@@ -220,9 +227,9 @@
 
 /* Global Casa Mețianu charcoal and steel palette. */
 :root {
-  --cream: #3a3f41;
-  --paper: #3a3f41;
-  --surface-ivory: #3a3f41;
+  --cream: #333333;
+  --paper: #333333;
+  --surface-ivory: #333333;
   --espresso: #b7c4cc;
   --ink: #b7c4cc;
   --taupe: #b7c4cc;
@@ -248,7 +255,7 @@ body,
 
 .image-caption {
   color: var(--text-steel, #b7c4cc);
-  background: rgba(58, 63, 65, 0.9);
+  background: rgba(51, 51, 51, 0.9);
 }
 
 .field input,
