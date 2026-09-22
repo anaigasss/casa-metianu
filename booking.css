@@ -443,7 +443,12 @@ body,
 .hero {
   border-bottom: 2px solid #736761;
   min-height: 0;
+  padding-top: 120px;
   padding-bottom: 52px;
+}
+
+.hero-copy {
+  text-align: center;
 }
 
 .menu-preview {
@@ -484,6 +489,7 @@ body,
 
 @media (max-width: 780px) {
   .hero {
+    padding-top: 92px;
     padding-bottom: 42px;
   }
 
