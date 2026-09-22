@@ -15,6 +15,12 @@
   letter-spacing: -0.025em;
 }
 
+.hero-title-main {
+  display: inline-block;
+  animation: title-wave-main 5.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
 .hero h1 em {
   display: inline-block;
   font-family: "Allura", "Playfair Display", cursive;
@@ -23,7 +29,29 @@
   font-size: 0.64em;
   line-height: 1.05;
   letter-spacing: 0.01em;
-  transform: translateY(-0.14em) rotate(-2deg);
+  animation: title-wave-script 5.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes title-wave-main {
+  0%, 100% { transform: translateY(0) rotate(-0.25deg); }
+  50% { transform: translateY(-5px) rotate(0.35deg); }
+}
+
+@keyframes title-wave-script {
+  0%, 100% { transform: translateY(-0.14em) rotate(-2deg); }
+  50% { transform: translateY(-0.04em) rotate(-0.7deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-main,
+  .hero h1 em {
+    animation: none;
+  }
+
+  .hero h1 em {
+    transform: translateY(-0.14em) rotate(-2deg);
+  }
 }
 
 @media (min-width: 781px) {
