@@ -17,14 +17,30 @@
 .hero-image .brand-hero-image {
   object-fit: contain;
   filter: none;
-  background: #333333;
+  background: transparent;
   padding: 0;
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.hero-image {
+  overflow: visible;
 }
 
 @media (min-width: 781px) {
   .hero-grid {
-    grid-template-columns: 0.82fr 1.18fr;
-    gap: 48px;
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-image {
+    height: 330px;
+  }
+
+  .hero-image .brand-hero-image {
+    transform: scale(1.05);
   }
 }
 
