@@ -13,6 +13,23 @@ mainNav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const menuTabs = document.querySelectorAll('[data-menu-tab]');
+const menuPanels = document.querySelectorAll('.menu-panel');
+
+menuTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    menuTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle('is-active', isActive);
+      item.setAttribute('aria-selected', String(isActive));
+    });
+
+    menuPanels.forEach((panel) => {
+      panel.hidden = panel.id !== tab.dataset.menuTab;
+    });
+  });
+});
+
 const bookingForm = document.querySelector('#booking-form');
 const bookingDate = document.querySelector('#booking-date');
 const formStatus = document.querySelector('#form-status');

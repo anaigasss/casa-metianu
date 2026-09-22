@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Outfit:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="booking.css?v=20260922-15" />
+    <link rel="stylesheet" href="booking.css?v=20260922-16" />
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Restaurant","name":"Casa Mețianu","url":"https://casametianu.ro/","email":"mihai.tomoiaga@grillwine.ro","address":{"@type":"PostalAddress","streetAddress":"Strada Ioan Mețianu nr. 2","addressLocality":"Arad","addressCountry":"RO"},"servesCuisine":["Românească","Internațională"]}
     </script>
@@ -90,13 +90,27 @@
             <p class="eyebrow eyebrow-light">Din bucătăria noastră</p>
             <h2>Gusturi care<br /><em>rămân cu tine.</em></h2>
             <p class="light-copy">Un meniu sezonier, construit în jurul ingredientelor locale și al plăcerii de a sta la masă.</p>
-            <a class="button button-light" href="#meniu">Vezi meniul</a>
+            <a class="button button-light" href="#menu-catalog">Vezi meniul</a>
           </div>
-          <div class="dish-list">
-            <div class="dish"><span><b>Selecție de început</b><small>pentru masa întreagă</small></span><strong>—</strong></div>
-            <div class="dish"><span><b>Feluri cu poveste</b><small>ingrediente de sezon</small></span><strong>—</strong></div>
-            <div class="dish"><span><b>Vinuri alese</b><small>din podgorii românești</small></span><strong>—</strong></div>
-            <div class="dish"><span><b>Deserturi de casă</b><small>finalul serii</small></span><strong>—</strong></div>
+          <div class="menu-catalog" id="menu-catalog">
+            <div class="menu-tabs" role="tablist" aria-label="Categorii meniu">
+              <button class="menu-tab is-active" id="food-tab" type="button" role="tab" aria-selected="true" aria-controls="food-panel" data-menu-tab="food-panel">FOOD</button>
+              <button class="menu-tab" id="drinks-tab" type="button" role="tab" aria-selected="false" aria-controls="drinks-panel" data-menu-tab="drinks-panel">DRINKS</button>
+            </div>
+            <div class="menu-panel" id="food-panel" role="tabpanel" aria-labelledby="food-tab">
+              <div class="dish-list">
+                <div class="dish"><span><b>Selecție de început</b><small>pentru masa întreagă</small></span><strong>—</strong></div>
+                <div class="dish"><span><b>Feluri cu poveste</b><small>ingrediente de sezon</small></span><strong>—</strong></div>
+                <div class="dish"><span><b>Deserturi de casă</b><small>finalul serii</small></span><strong>—</strong></div>
+              </div>
+            </div>
+            <div class="menu-panel" id="drinks-panel" role="tabpanel" aria-labelledby="drinks-tab" hidden>
+              <div class="dish-list">
+                <div class="dish"><span><b>Vinuri alese</b><small>din podgorii românești și internaționale</small></span><strong>—</strong></div>
+                <div class="dish"><span><b>Cocktailuri</b><small>clasice și semnături ale casei</small></span><strong>—</strong></div>
+                <div class="dish"><span><b>Băuturi fără alcool</b><small>selecția casei</small></span><strong>—</strong></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
