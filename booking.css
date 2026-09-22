@@ -400,6 +400,11 @@ body,
 .house-story {
   border-top: 1px solid rgba(64, 57, 48, 0.14);
   border-bottom: 1px solid rgba(64, 57, 48, 0.14);
+  padding-top: 72px;
+}
+
+.story {
+  padding-bottom: 72px;
 }
 
 /* Light opening chapter, ending where “Povestea noastră” begins. */
@@ -466,6 +471,14 @@ body,
 @media (max-width: 780px) {
   .hero {
     padding-bottom: 42px;
+  }
+
+  .story {
+    padding-bottom: 50px;
+  }
+
+  .house-story {
+    padding-top: 50px;
   }
 }
 
