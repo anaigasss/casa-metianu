@@ -201,3 +201,67 @@
     padding: 26px 18px;
   }
 }
+
+/* Match the warm ivory ground used by the original Casa Mețianu artwork. */
+:root {
+  --cream: #fffee8;
+  --paper: #fffee8;
+  --surface-ivory: #fffee8;
+}
+
+body,
+.site-header,
+.section-muted,
+.section-dark,
+.reservation-card,
+.booking-form,
+.site-footer {
+  background-color: var(--surface-ivory);
+}
+
+.section-dark,
+.site-footer {
+  color: var(--ink);
+}
+
+.menu-preview h2,
+.footer-brand {
+  color: var(--espresso);
+}
+
+.eyebrow-light,
+.footer-label,
+.footer-motto {
+  color: var(--gold);
+}
+
+.light-copy,
+.dish small,
+.footer-grid p:not(.footer-label),
+.footer-grid a,
+.footer-bottom {
+  color: var(--taupe);
+}
+
+.dish-list,
+.dish,
+.footer-bottom {
+  border-color: rgba(64, 57, 48, 0.2);
+}
+
+.button-light {
+  color: var(--espresso);
+  border-color: var(--espresso);
+}
+
+.button-light:hover {
+  color: var(--surface-ivory);
+  background: var(--espresso);
+}
+
+.year-stamp span {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  padding-left: 0.2em;
+}
