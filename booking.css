@@ -6,31 +6,6 @@
   font-display: swap;
 }
 
-/* Compact, centered footer contact layout. */
-.footer-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: min(820px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 50px;
-}
-
-.site-footer {
-  padding-top: 55px;
-}
-
-@media (max-width: 780px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 460px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .hero h1 {
   font-family: "Cormorant Garamond", "Bodoni 72", "Didot", "Playfair Display", serif;
   font-style: normal;
@@ -476,10 +451,6 @@ body,
   text-align: center;
 }
 
-[id] {
-  scroll-margin-top: 92px;
-}
-
 .hero-actions {
   justify-content: center;
 }
@@ -810,7 +781,6 @@ body,
     flex-basis: 100%;
     gap: 0;
     padding: 10px 0 0;
-    margin-bottom: 8px;
     background: transparent;
     box-shadow: none;
   }
@@ -834,10 +804,6 @@ body,
   }
 
   .hero {
-    padding-top: 164px;
-  }
-
-  [id] {
-    scroll-margin-top: 142px;
+    padding-top: 154px;
   }
 }
